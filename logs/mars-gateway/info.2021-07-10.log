@@ -1,0 +1,31 @@
+13:21:36.133 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+13:21:38.054 [main] INFO  c.a.n.c.c.i.LocalConfigInfoProcessor - [<clinit>,67] - LOCAL_SNAPSHOT_PATH:C:\Users\86186\nacos\config
+13:21:38.058 [main] INFO  c.a.n.c.r.client - [lambda$createClient$0,77] - [RpcClientFactory] create a new rpc client of e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0
+13:21:38.275 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 109 ms to scan 1 urls, producing 3 keys and 6 values 
+13:21:38.323 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 15 ms to scan 1 urls, producing 4 keys and 9 values 
+13:21:38.338 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 13 ms to scan 1 urls, producing 3 keys and 10 values 
+13:21:38.562 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 222 ms to scan 199 urls, producing 0 keys and 0 values 
+13:21:38.574 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 11 ms to scan 1 urls, producing 1 keys and 5 values 
+13:21:38.590 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 14 ms to scan 1 urls, producing 1 keys and 7 values 
+13:21:38.602 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 10 ms to scan 1 urls, producing 2 keys and 8 values 
+13:21:38.736 [main] INFO  o.r.Reflections - [scan,232] - Reflections took 132 ms to scan 199 urls, producing 0 keys and 0 values 
+13:21:38.740 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]RpcClient init label, labels={module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+13:21:38.740 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$326/527247308
+13:21:38.741 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$327/1133730108
+13:21:38.742 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+13:21:38.743 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]RpcClient init, ServerListFactory =com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+13:21:38.754 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] Try to connect to server on start up, server: {serverIp='192.168.145.130', server main port=2222}
+13:21:43.308 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] Try to connect to server on start up, server: {serverIp='192.168.145.130', server main port=2222}
+13:21:46.312 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] Try to connect to server on start up, server: {serverIp='192.168.145.130', server main port=2222}
+13:21:49.317 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] try to re connect to a new server ,server is  not appointed,will choose a random server.
+13:21:49.318 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+13:21:49.319 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+13:21:49.466 [main] INFO  c.a.n.c.c.i.Limiter - [<clinit>,56] - limitTime:5.0
+13:21:50.722 [main] INFO  c.m.c.MarsGatewayApplication - [logStartupProfileInfo,663] - The following profiles are active: dev
+13:21:55.439 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 1 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown
+13:21:58.643 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 2 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown
+13:22:01.947 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 3 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown
+13:22:05.351 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 4 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown
+13:22:08.856 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 5 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown
+13:22:12.462 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 6 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown
+13:22:16.164 [com.alibaba.nacos.client.remote.worker] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [e260b0e4-d080-441c-a3a7-0f537b3a282a_config-0] fail to connect server,after trying 7 times, last try server is {serverIp='192.168.145.130', server main port=2222},error=unknown

@@ -1,0 +1,926 @@
+20:24:15.368 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 354400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@20f6f88c[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@608fe01f, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2687725a, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@5a75ec37}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:24:18.388 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 463900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@7d904ff1[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@608fe01f, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2687725a, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@5a75ec37}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:24:21.398 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 133700 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@71e35c4[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@608fe01f, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@2687725a, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@5a75ec37}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:24:21.627 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=1cef8dae9e9986ca5532a122f5b880af, Client-RequestTS=1626783861403, exConfigInfo=true, notify=false, Timestamp=1626783861405}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:24:21.728 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=1cef8dae9e9986ca5532a122f5b880af, Client-RequestTS=1626783861403, exConfigInfo=true, notify=false, Timestamp=1626783861405}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:24:21.829 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=1cef8dae9e9986ca5532a122f5b880af, Client-RequestTS=1626783861403, exConfigInfo=true, notify=false, Timestamp=1626783861405}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:24:21.967 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=a1d2ca1f442137087dfdeb9a497a2d00, Client-RequestTS=1626783861865, exConfigInfo=true, notify=false, Timestamp=1626783861865}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:24:22.068 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=a1d2ca1f442137087dfdeb9a497a2d00, Client-RequestTS=1626783861865, exConfigInfo=true, notify=false, Timestamp=1626783861865}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:24:22.168 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=a1d2ca1f442137087dfdeb9a497a2d00, Client-RequestTS=1626783861865, exConfigInfo=true, notify=false, Timestamp=1626783861865}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:24:22.276 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=2e4cf4d852d32b8732942c0f7086057d, Client-RequestTS=1626783862170, exConfigInfo=true, notify=false, Timestamp=1626783862170}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:24:22.378 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=2e4cf4d852d32b8732942c0f7086057d, Client-RequestTS=1626783862170, exConfigInfo=true, notify=false, Timestamp=1626783862170}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:24:22.479 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=2e4cf4d852d32b8732942c0f7086057d, Client-RequestTS=1626783862170, exConfigInfo=true, notify=false, Timestamp=1626783862170}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:24:22.581 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=e4619d13f8c55159e36562f40ca908ce, Client-RequestTS=1626783862479, exConfigInfo=true, notify=false, Timestamp=1626783862479}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:24:22.681 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=e4619d13f8c55159e36562f40ca908ce, Client-RequestTS=1626783862479, exConfigInfo=true, notify=false, Timestamp=1626783862479}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:24:22.781 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=e4619d13f8c55159e36562f40ca908ce, Client-RequestTS=1626783862479, exConfigInfo=true, notify=false, Timestamp=1626783862479}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:24:23.310 [main] ERROR o.s.b.SpringApplication - [reportFailure,843] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class com.mars.system.api.factory.RemoteFileFallbackFactory
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.access$000(AutoConfigurationSorter.java:154)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.util.TimSort.sort(TimSort.java:234)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1462)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:468)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:453)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:882)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+Caused by: java.io.FileNotFoundException: class path resource [com/mars/system/api/factory/RemoteFileFallbackFactory.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:187)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:49)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 27 common frames omitted
+20:28:12.887 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 926300 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@4012d5bc[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@26bbe604, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@fe34b86, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@3c98781a}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:28:15.898 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 457101 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@2d4608a6[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@26bbe604, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@fe34b86, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@3c98781a}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:28:18.902 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 171900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@354e7004[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@26bbe604, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@fe34b86, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@3c98781a}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:28:19.063 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=b3b32b99893edf26282af6a06b6be0c7, Client-RequestTS=1626784098905, exConfigInfo=true, notify=false, Timestamp=1626784098907}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:28:19.164 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=b3b32b99893edf26282af6a06b6be0c7, Client-RequestTS=1626784098905, exConfigInfo=true, notify=false, Timestamp=1626784098907}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:28:19.265 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=b3b32b99893edf26282af6a06b6be0c7, Client-RequestTS=1626784098905, exConfigInfo=true, notify=false, Timestamp=1626784098907}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:28:19.376 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=3bfd865fbdaeebb0fdea55b1081e25bc, Client-RequestTS=1626784099276, exConfigInfo=true, notify=false, Timestamp=1626784099276}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:28:19.477 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=3bfd865fbdaeebb0fdea55b1081e25bc, Client-RequestTS=1626784099276, exConfigInfo=true, notify=false, Timestamp=1626784099276}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:28:19.578 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=3bfd865fbdaeebb0fdea55b1081e25bc, Client-RequestTS=1626784099276, exConfigInfo=true, notify=false, Timestamp=1626784099276}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:28:19.679 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=7e13ef63740b519b48c4c75cf4f955d3, Client-RequestTS=1626784099579, exConfigInfo=true, notify=false, Timestamp=1626784099579}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:28:19.780 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=7e13ef63740b519b48c4c75cf4f955d3, Client-RequestTS=1626784099579, exConfigInfo=true, notify=false, Timestamp=1626784099579}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:28:19.881 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=7e13ef63740b519b48c4c75cf4f955d3, Client-RequestTS=1626784099579, exConfigInfo=true, notify=false, Timestamp=1626784099579}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:28:19.983 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=dc2f5418001ada1f78d112b1dbe2f384, Client-RequestTS=1626784099882, exConfigInfo=true, notify=false, Timestamp=1626784099882}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:28:20.083 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=dc2f5418001ada1f78d112b1dbe2f384, Client-RequestTS=1626784099882, exConfigInfo=true, notify=false, Timestamp=1626784099882}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:28:20.184 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=dc2f5418001ada1f78d112b1dbe2f384, Client-RequestTS=1626784099882, exConfigInfo=true, notify=false, Timestamp=1626784099882}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:28:20.517 [main] ERROR o.s.b.SpringApplication - [reportFailure,843] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class com.mars.system.api.factory.RemoteFileFallbackFactory
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.access$000(AutoConfigurationSorter.java:154)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.util.TimSort.sort(TimSort.java:234)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1462)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:468)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:453)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:882)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+Caused by: java.io.FileNotFoundException: class path resource [com/mars/system/api/factory/RemoteFileFallbackFactory.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:187)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:49)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 27 common frames omitted
+20:30:39.669 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 659300 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6dab01d9[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:30:42.680 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 851700 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6232ffdb[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:30:45.685 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 614800 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@f9f3928[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:30:45.879 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=ff50108c0783795f7ed3977b9710d6f8, Client-RequestTS=1626784245688, exConfigInfo=true, notify=false, Timestamp=1626784245690}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:30:45.979 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=ff50108c0783795f7ed3977b9710d6f8, Client-RequestTS=1626784245688, exConfigInfo=true, notify=false, Timestamp=1626784245690}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:30:46.080 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=ff50108c0783795f7ed3977b9710d6f8, Client-RequestTS=1626784245688, exConfigInfo=true, notify=false, Timestamp=1626784245690}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:30:46.190 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=c533b3f31888408d7b2e3aac09dedac4, Client-RequestTS=1626784246089, exConfigInfo=true, notify=false, Timestamp=1626784246089}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:30:46.291 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=c533b3f31888408d7b2e3aac09dedac4, Client-RequestTS=1626784246089, exConfigInfo=true, notify=false, Timestamp=1626784246089}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:30:46.391 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=c533b3f31888408d7b2e3aac09dedac4, Client-RequestTS=1626784246089, exConfigInfo=true, notify=false, Timestamp=1626784246089}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:30:46.493 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=816f0f0a9be84cabd985b17e34be8f76, Client-RequestTS=1626784246392, exConfigInfo=true, notify=false, Timestamp=1626784246392}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:30:46.593 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=816f0f0a9be84cabd985b17e34be8f76, Client-RequestTS=1626784246392, exConfigInfo=true, notify=false, Timestamp=1626784246392}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:30:46.694 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=816f0f0a9be84cabd985b17e34be8f76, Client-RequestTS=1626784246392, exConfigInfo=true, notify=false, Timestamp=1626784246392}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:30:46.797 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=6ae6f458ce9580bf4c9a4b7ae817a85c, Client-RequestTS=1626784246695, exConfigInfo=true, notify=false, Timestamp=1626784246695}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:30:46.898 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=6ae6f458ce9580bf4c9a4b7ae817a85c, Client-RequestTS=1626784246695, exConfigInfo=true, notify=false, Timestamp=1626784246695}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:30:46.998 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=6ae6f458ce9580bf4c9a4b7ae817a85c, Client-RequestTS=1626784246695, exConfigInfo=true, notify=false, Timestamp=1626784246695}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:30:47.211 [main] ERROR o.s.b.SpringApplication - [reportFailure,843] - Application run failed
+java.lang.IllegalStateException: Unable to read meta-data for class com.mars.system.api.factory.RemoteFileFallbackFactory
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:237)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getOrder(AutoConfigurationSorter.java:208)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.access$000(AutoConfigurationSorter.java:154)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.lambda$getInPriorityOrder$0(AutoConfigurationSorter.java:63)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:360)
+	at java.util.TimSort.sort(TimSort.java:234)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1462)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter.getInPriorityOrder(AutoConfigurationSorter.java:62)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.sortAutoConfigurations(AutoConfigurationImportSelector.java:468)
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.selectImports(AutoConfigurationImportSelector.java:453)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:882)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:193)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+Caused by: java.io.FileNotFoundException: class path resource [com/mars/system/api/factory/RemoteFileFallbackFactory.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:187)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:49)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.boot.autoconfigure.AutoConfigurationSorter$AutoConfigurationClass.getAnnotationMetadata(AutoConfigurationSorter.java:233)
+	... 27 common frames omitted
+20:35:40.729 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 729400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@58867cd5[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5981f4a6, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@63dfada0, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f231ced}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:35:43.740 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 704200 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@26fb4d06[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5981f4a6, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@63dfada0, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f231ced}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:35:46.744 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 677900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@4d266391[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5981f4a6, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@63dfada0, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f231ced}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:35:46.936 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=60b03cf9bf4e41244de75e8cb5b643df, Client-RequestTS=1626784546748, exConfigInfo=true, notify=false, Timestamp=1626784546749}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:35:47.036 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=60b03cf9bf4e41244de75e8cb5b643df, Client-RequestTS=1626784546748, exConfigInfo=true, notify=false, Timestamp=1626784546749}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:35:47.137 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=60b03cf9bf4e41244de75e8cb5b643df, Client-RequestTS=1626784546748, exConfigInfo=true, notify=false, Timestamp=1626784546749}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:35:47.247 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=def8cae87b40211cd8e39ce553906d9c, Client-RequestTS=1626784547146, exConfigInfo=true, notify=false, Timestamp=1626784547146}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:35:47.347 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=def8cae87b40211cd8e39ce553906d9c, Client-RequestTS=1626784547146, exConfigInfo=true, notify=false, Timestamp=1626784547146}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:35:47.448 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=def8cae87b40211cd8e39ce553906d9c, Client-RequestTS=1626784547146, exConfigInfo=true, notify=false, Timestamp=1626784547146}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:35:47.550 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=12040045b5b094cf6b355e6719e769f1, Client-RequestTS=1626784547449, exConfigInfo=true, notify=false, Timestamp=1626784547449}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:35:47.651 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=12040045b5b094cf6b355e6719e769f1, Client-RequestTS=1626784547449, exConfigInfo=true, notify=false, Timestamp=1626784547449}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:35:47.751 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=12040045b5b094cf6b355e6719e769f1, Client-RequestTS=1626784547449, exConfigInfo=true, notify=false, Timestamp=1626784547449}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:35:47.854 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=ac3467a0f73fc0773438a2ae37b2ec8b, Client-RequestTS=1626784547752, exConfigInfo=true, notify=false, Timestamp=1626784547752}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:35:47.955 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=ac3467a0f73fc0773438a2ae37b2ec8b, Client-RequestTS=1626784547752, exConfigInfo=true, notify=false, Timestamp=1626784547752}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:35:48.055 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=ac3467a0f73fc0773438a2ae37b2ec8b, Client-RequestTS=1626784547752, exConfigInfo=true, notify=false, Timestamp=1626784547752}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:35:49.749 [com.alibaba.nacos.client.remote.worker] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 583501 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@5f2931c2[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5981f4a6, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@63dfada0, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f231ced}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:529)
+	at com.alibaba.nacos.common.remote.client.RpcClient$3.run(RpcClient.java:374)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+20:35:51.335 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+20:36:49.112 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 155900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6dab01d9[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:36:52.127 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 152100 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6232ffdb[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:36:55.132 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 271900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@f9f3928[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+20:36:55.335 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=9ea4e618814046956e0ff11fe0a21b3d, Client-RequestTS=1626784615135, exConfigInfo=true, notify=false, Timestamp=1626784615137}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:36:55.436 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=9ea4e618814046956e0ff11fe0a21b3d, Client-RequestTS=1626784615135, exConfigInfo=true, notify=false, Timestamp=1626784615137}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:36:55.537 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=9ea4e618814046956e0ff11fe0a21b3d, Client-RequestTS=1626784615135, exConfigInfo=true, notify=false, Timestamp=1626784615137}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:36:55.646 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=36abcb211e41e7e40c2794c5a9c55295, Client-RequestTS=1626784615546, exConfigInfo=true, notify=false, Timestamp=1626784615546}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:36:55.747 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=36abcb211e41e7e40c2794c5a9c55295, Client-RequestTS=1626784615546, exConfigInfo=true, notify=false, Timestamp=1626784615546}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:36:55.848 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=36abcb211e41e7e40c2794c5a9c55295, Client-RequestTS=1626784615546, exConfigInfo=true, notify=false, Timestamp=1626784615546}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:36:55.949 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=4ea924a05380ceb10136915bde7d862f, Client-RequestTS=1626784615849, exConfigInfo=true, notify=false, Timestamp=1626784615849}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:36:56.050 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=4ea924a05380ceb10136915bde7d862f, Client-RequestTS=1626784615849, exConfigInfo=true, notify=false, Timestamp=1626784615849}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:36:56.151 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=4ea924a05380ceb10136915bde7d862f, Client-RequestTS=1626784615849, exConfigInfo=true, notify=false, Timestamp=1626784615849}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:36:56.254 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=b5f5c646017f94ef450cc3bf66502a18, Client-RequestTS=1626784616152, exConfigInfo=true, notify=false, Timestamp=1626784616152}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+20:36:56.354 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=b5f5c646017f94ef450cc3bf66502a18, Client-RequestTS=1626784616152, exConfigInfo=true, notify=false, Timestamp=1626784616152}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+20:36:56.455 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=b5f5c646017f94ef450cc3bf66502a18, Client-RequestTS=1626784616152, exConfigInfo=true, notify=false, Timestamp=1626784616152}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+20:36:58.136 [com.alibaba.nacos.client.remote.worker] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 437501 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@5f2931c2[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:529)
+	at com.alibaba.nacos.common.remote.client.RpcClient$3.run(RpcClient.java:374)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+20:36:58.497 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+21:08:45.507 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 275400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6dab01d9[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+21:08:48.524 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 1 milliseconds, 748300 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@6232ffdb[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+21:08:51.528 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 680900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@f9f3928[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:395)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.ensureRpcClient(ClientWorker.java:924)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.getOneRunningClient(ClientWorker.java:1087)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.queryConfig(ClientWorker.java:979)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.getServerConfig(ClientWorker.java:407)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfigInner(NacosConfigService.java:166)
+	at com.alibaba.nacos.client.config.NacosConfigService.getConfig(NacosConfigService.java:94)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.loadNacosData(NacosPropertySourceBuilder.java:85)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceBuilder.build(NacosPropertySourceBuilder.java:73)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosPropertySource(NacosPropertySourceLocator.java:199)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosDataIfPresent(NacosPropertySourceLocator.java:186)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadNacosConfiguration(NacosPropertySourceLocator.java:158)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.loadSharedConfiguration(NacosPropertySourceLocator.java:116)
+	at com.alibaba.cloud.nacos.client.NacosPropertySourceLocator.locate(NacosPropertySourceLocator.java:101)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:51)
+	at org.springframework.cloud.bootstrap.config.PropertySourceLocator.locateCollection(PropertySourceLocator.java:47)
+	at org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration.initialize(PropertySourceBootstrapConfiguration.java:95)
+	at org.springframework.boot.SpringApplication.applyInitializers(SpringApplication.java:634)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:403)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.mars.auth.MarsAuthApplication.main(MarsAuthApplication.java:13)
+21:08:51.723 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=c3e43fe0444816cbeb186c247b00f0d7, Client-RequestTS=1626786531533, exConfigInfo=true, notify=false, Timestamp=1626786531534}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+21:08:51.823 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=c3e43fe0444816cbeb186c247b00f0d7, Client-RequestTS=1626786531533, exConfigInfo=true, notify=false, Timestamp=1626786531534}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+21:08:51.924 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=c3e43fe0444816cbeb186c247b00f0d7, Client-RequestTS=1626786531533, exConfigInfo=true, notify=false, Timestamp=1626786531534}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+21:08:52.035 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=4c2d8a6803e44434301d1ced57a1bd95, Client-RequestTS=1626786531934, exConfigInfo=true, notify=false, Timestamp=1626786531934}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+21:08:52.135 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=4c2d8a6803e44434301d1ced57a1bd95, Client-RequestTS=1626786531934, exConfigInfo=true, notify=false, Timestamp=1626786531934}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+21:08:52.236 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=4c2d8a6803e44434301d1ced57a1bd95, Client-RequestTS=1626786531934, exConfigInfo=true, notify=false, Timestamp=1626786531934}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+21:08:52.338 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=98b829bb840dfa5fee4f5f60e65decda, Client-RequestTS=1626786532237, exConfigInfo=true, notify=false, Timestamp=1626786532237}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+21:08:52.439 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=98b829bb840dfa5fee4f5f60e65decda, Client-RequestTS=1626786532237, exConfigInfo=true, notify=false, Timestamp=1626786532237}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+21:08:52.540 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=98b829bb840dfa5fee4f5f60e65decda, Client-RequestTS=1626786532237, exConfigInfo=true, notify=false, Timestamp=1626786532237}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+21:08:52.641 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=8bad6f5a63cde2fceb00a93eb70d50a2, Client-RequestTS=1626786532541, exConfigInfo=true, notify=false, Timestamp=1626786532541}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:STARTING
+21:08:52.742 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=8bad6f5a63cde2fceb00a93eb70d50a2, Client-RequestTS=1626786532541, exConfigInfo=true, notify=false, Timestamp=1626786532541}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:STARTING
+21:08:52.843 [main] ERROR c.a.n.c.r.client - [printIfErrorEnabled,99] - Send request fail, request=ConfigQueryRequest{headers={charset=UTF-8, Client-AppName=unknown, Client-RequestToken=8bad6f5a63cde2fceb00a93eb70d50a2, Client-RequestTS=1626786532541, exConfigInfo=true, notify=false, Timestamp=1626786532541}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:STARTING
+21:08:54.533 [com.alibaba.nacos.client.remote.worker] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.130.145 ,port 3222 is available , error ={}
+java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 679400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@7a2950b0[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@770beef5, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@6dd1f638, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@414f13fc}}}}}]]
+	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:146)
+	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:268)
+	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:529)
+	at com.alibaba.nacos.common.remote.client.RpcClient$3.run(RpcClient.java:374)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+21:08:55.103 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+21:09:23.750 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+21:10:34.257 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+21:11:20.102 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+21:18:23.395 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field tokenService in com.mars.auth.controller.TokenController required a bean of type 'com.mars.common.security.service.TokenService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.security.service.TokenService' in your configuration.
+
+21:36:52.329 [http-nio-9200-exec-1] ERROR c.m.s.a.f.RemoteUserFallbackFactory - [create,25] - 用户服务调用失败:[503] during [GET] to [http://ruoyi-system/user/info/admin] [RemoteUserService#getUserInfo(String)]: [Load balancer does not contain an instance for the service ruoyi-system]
+21:36:52.346 [http-nio-9200-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - [log,175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.mars.common.core.exception.BaseException] with root cause
+com.mars.common.core.exception.BaseException: null
+	at com.mars.auth.service.SysLoginService.login(SysLoginService.java:55)
+	at com.mars.auth.controller.TokenController.login(TokenController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

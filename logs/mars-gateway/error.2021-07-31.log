@@ -1,0 +1,4 @@
+00:35:08.918 [boundedElastic-5] ERROR c.m.g.h.GatewayExceptionHandler - [handle,56] - [网关异常处理]请求路径:/schedule/job/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for ruoyi-job"
+00:35:21.726 [reactor-http-nio-2] ERROR c.m.g.h.GatewayExceptionHandler - [handle,56] - [网关异常处理]请求路径:/swagger-ui/index.html,异常信息:404 NOT_FOUND
+00:35:21.769 [reactor-http-nio-2] ERROR c.m.g.h.GatewayExceptionHandler - [handle,56] - [网关异常处理]请求路径:/favicon.ico,异常信息:404 NOT_FOUND
+00:35:37.454 [boundedElastic-4] ERROR c.m.g.h.GatewayExceptionHandler - [handle,56] - [网关异常处理]请求路径:/code/gen/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for ruoyi-gen"

@@ -1,0 +1,2 @@
+16:29:30.270 [reactor-http-nio-2] ERROR c.m.g.f.AuthFilter - [setUnauthorizedResponse,95] - [鉴权异常处理]请求路径:/system/user/getInfo
+17:40:15.044 [boundedElastic-3] ERROR c.m.g.h.GatewayExceptionHandler - [handle,56] - [网关异常处理]请求路径:/schedule/job/list,异常信息:503 SERVICE_UNAVAILABLE "Unable to find instance for ruoyi-job"

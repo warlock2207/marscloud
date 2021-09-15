@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mars-api-system" />
+        <module name="mars-auth" />
+        <module name="mars-common-core" />
+        <module name="mars-common-datascope" />
+        <module name="mars-common-datasource" />
+        <module name="mars-common-log" />
+        <module name="mars-common-redis" />
+        <module name="mars-common-security" />
+        <module name="mars-gateway" />
+        <module name="mars-system" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

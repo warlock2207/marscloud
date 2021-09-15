@@ -1,0 +1,108 @@
+22:00:35.659 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.mars.cloud.service.impl.ValidateCodeServiceImpl required a bean of type 'com.mars.common.redis.service.RedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.redis.service.RedisService' in your configuration.
+
+22:02:17.063 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.mars.cloud.service.impl.ValidateCodeServiceImpl required a bean of type 'com.mars.common.redis.service.RedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.redis.service.RedisService' in your configuration.
+
+22:06:45.189 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.mars.cloud.service.impl.ValidateCodeServiceImpl required a bean of type 'com.mars.common.redis.service.RedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.redis.service.RedisService' in your configuration.
+
+22:07:18.186 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.mars.cloud.service.impl.ValidateCodeServiceImpl required a bean of type 'com.mars.common.redis.service.RedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.redis.service.RedisService' in your configuration.
+
+22:16:18.795 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.mars.cloud.service.impl.ValidateCodeServiceImpl required a bean of type 'com.mars.common.redis.service.RedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.redis.service.RedisService' in your configuration.
+
+22:19:40.685 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - [report,40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.mars.cloud.service.impl.ValidateCodeServiceImpl required a bean of type 'com.mars.common.redis.service.RedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mars.common.redis.service.RedisService' in your configuration.
+
