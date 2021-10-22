@@ -3,7 +3,7 @@ package com.mars.common.core.constants;
 /**
  * 服务名称
  *
- * @author ruoyi
+ *
  */
 public class ServiceNameConstants
 {

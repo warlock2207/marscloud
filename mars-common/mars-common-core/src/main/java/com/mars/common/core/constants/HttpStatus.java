@@ -3,7 +3,7 @@ package com.mars.common.core.constants;
 /**
  * 返回状态码
  *
- * @author ruoyi
+ *
  */
 public class HttpStatus
 {

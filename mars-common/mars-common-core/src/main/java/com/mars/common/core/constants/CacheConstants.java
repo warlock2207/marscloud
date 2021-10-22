@@ -3,7 +3,7 @@ package com.mars.common.core.constants;
 /**
  * 缓存的key 常量
  *
- * @author ruoyi
+ *
  */
 public class CacheConstants
 {

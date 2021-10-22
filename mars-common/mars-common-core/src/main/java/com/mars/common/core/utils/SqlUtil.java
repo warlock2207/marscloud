@@ -6,7 +6,7 @@ import com.mars.common.core.exception.BaseException;
 /**
  * sql操作工具类
  *
- * @author ruoyi
+ *
  */
 public class SqlUtil
 {

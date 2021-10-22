@@ -3,7 +3,7 @@ package com.mars.common.core.constants;
 /**
  * 通用常量信息
  *
- * @author ruoyi
+ *
  */
 public class Constants
 {

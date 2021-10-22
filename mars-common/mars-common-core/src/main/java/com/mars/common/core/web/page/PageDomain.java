@@ -5,7 +5,7 @@ import com.mars.common.core.utils.StringUtils;
 /**
  * 分页数据
  *
- * @author ruoyi
+ *
  */
 public class PageDomain
 {

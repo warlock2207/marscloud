@@ -5,7 +5,7 @@ import com.mars.common.core.text.UUID;
 /**
  * ID生成器工具类
  *
- * @author ruoyi
+ *
  */
 public class IdUtils
 {
