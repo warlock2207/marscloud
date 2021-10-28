@@ -12,7 +12,7 @@ import java.util.List;
 public interface SysConfigMapper
 {
     /**
-     * 查询参数配置信息
+     * 查询参数配置信息1
      *
      * @param config 参数配置信息
      * @return 参数配置信息
