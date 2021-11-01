@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Configuration
 @RefreshScope
-@ConfigurationProperties(prefix = "ignore")
+@ConfigurationProperties(prefix = "security.ignore")
 public class IgnoreWhiteProperties
 {
     /**
