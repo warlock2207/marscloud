@@ -12,7 +12,7 @@
     <artifactId>mars-api-system</artifactId>
     <dependencies>
 
-        <!-- RuoYi Common Core-->
+        <!-- mars Common Core-->
         <dependency>
             <groupId>com.mars</groupId>
             <artifactId>mars-common-core</artifactId>

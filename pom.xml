@@ -246,6 +246,8 @@
       <module>mars-auth</module>
       <module>mars-api</module>
       <module>mars-modules</module>
+      <module>mars-gen</module>
+    <module>mars-modules/mars-gen</module>
   </modules>
   <packaging>pom</packaging>
 

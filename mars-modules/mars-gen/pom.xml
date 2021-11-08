@@ -3,13 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>mars-modules</artifactId>
+        <artifactId>mars</artifactId>
         <groupId>com.mars</groupId>
         <version>3.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mars-system</artifactId>
+    <artifactId>mars-gen</artifactId>
+
+    <description>
+        mars-modules-gen代码生成
+    </description>
 
     <dependencies>
 
@@ -44,38 +48,32 @@
             <version>${swagger.fox.version}</version>
         </dependency>
 
+        <!-- Apache Velocity -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+
+        <!-- Commons Collections -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+
         <!-- Mysql Connector -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- Mars Common DataSource -->
-        <dependency>
-            <groupId>com.mars</groupId>
-            <artifactId>mars-common-datasource</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.mars</groupId>
-            <artifactId>mars-common-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.mars</groupId>
             <artifactId>mars-common-log</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.mars</groupId>
-            <artifactId>mars-common-datascope</artifactId>
-        </dependency>
 
 
-
-        <!-- mars Common Swagger
-        <dependency>
+      <!--  <dependency>
             <groupId>com.mars</groupId>
             <artifactId>mars-common-swagger</artifactId>
         </dependency>-->
@@ -98,4 +96,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

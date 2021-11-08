@@ -13,7 +13,7 @@
 
     <dependencies>
 
-        <!-- RuoYi Common Security -->
+        <!-- mars Common Security -->
         <dependency>
             <groupId>com.mars</groupId>
             <artifactId>mars-common-security</artifactId>
