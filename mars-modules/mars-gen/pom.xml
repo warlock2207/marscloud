@@ -76,7 +76,11 @@
             <artifactId>mars-common-log</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>3.4.3.4</version>
+        </dependency>
       <!--  <dependency>
             <groupId>com.mars</groupId>
             <artifactId>mars-common-swagger</artifactId>

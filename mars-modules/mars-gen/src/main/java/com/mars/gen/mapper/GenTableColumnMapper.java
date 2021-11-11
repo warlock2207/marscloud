@@ -2,12 +2,13 @@ package com.mars.gen.mapper;
 
 import java.util.List;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.mars.gen.domain.GenTableColumn;
 
 /**
  * 业务字段 数据层
  */
-public interface GenTableColumnMapper
+public interface GenTableColumnMapper extends BaseMapper<GenTableColumn>
 {
     /**
      * 根据表名称查询列信息

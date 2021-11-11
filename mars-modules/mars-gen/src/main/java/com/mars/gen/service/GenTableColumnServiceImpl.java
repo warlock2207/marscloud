@@ -1,6 +1,8 @@
 package com.mars.gen.service;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.mars.common.core.text.Convert;
@@ -11,8 +13,7 @@ import com.mars.gen.mapper.GenTableColumnMapper;
  * 业务字段 服务层实现
  */
 @Service
-public class GenTableColumnServiceImpl implements IGenTableColumnService 
-{
+public class GenTableColumnServiceImpl extends ServiceImpl<GenTableColumnMapper, GenTableColumn> implements IGenTableColumnService {
 	@Autowired
 	private GenTableColumnMapper genTableColumnMapper;
 

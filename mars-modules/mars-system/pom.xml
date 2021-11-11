@@ -72,6 +72,11 @@
             <artifactId>mars-common-datascope</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>3.4.3.4</version>
+        </dependency>
 
 
         <!-- mars Common Swagger

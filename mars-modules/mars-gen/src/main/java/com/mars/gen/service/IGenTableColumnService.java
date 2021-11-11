@@ -1,14 +1,16 @@
 package com.mars.gen.service;
 
-import java.util.List;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.mars.gen.domain.GenTableColumn;
+
+import java.util.List;
 
 /**
  * 业务字段 服务层
  * 
  * @author ruoyi
  */
-public interface IGenTableColumnService
+public interface IGenTableColumnService extends IService<GenTableColumn>
 {
     /**
      * 查询业务字段列表
