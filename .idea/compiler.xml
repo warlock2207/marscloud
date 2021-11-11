@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mars-common-log" />
         <module name="mars-auth" />
+        <module name="mars-gen" />
         <module name="mars-common-datasource" />
         <module name="mars-gateway" />
         <module name="mars-common-core" />

@@ -2,7 +2,7 @@ package com.mars.gen.util;
 
 import java.util.Properties;
 import org.apache.velocity.app.Velocity;
-import com.mars.common.core.constant.Constants;
+import com.mars.common.core.constants.Constants;
 
 /**
  * VelocityEngine工厂
