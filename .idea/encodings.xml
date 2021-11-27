@@ -33,6 +33,8 @@
     <file url="file://$PROJECT_DIR$/mars-modules" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mars-modules/mars-gen/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mars-modules/mars-gen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mars-modules/mars-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mars-modules/mars-job/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mars-modules/mars-system" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mars-modules/mars-system/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mars-modules/mars-system/src/main/resources" charset="UTF-8" />
