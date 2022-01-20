@@ -10,13 +10,13 @@
         <module name="mars-common-redis" />
         <module name="mars-common-log" />
         <module name="mars-gen" />
-        <module name="mars-common-datascope" />
+        <module name="mars-system" />
         <module name="mars-common-datasource" />
         <module name="mars-gateway" />
         <module name="mars-common-core" />
-        <module name="mars-system" />
-        <module name="mars-common-security" />
         <module name="mars-auth" />
+        <module name="mars-common-security" />
+        <module name="mars-common-datascope" />
         <module name="mars-api-system" />
         <module name="mars-job" />
       </profile>
