@@ -9,8 +9,7 @@ import java.util.List;
  *
  * @author mars
  */
-public interface ISysOperLogService
-{
+public interface ISysOperLogService {
     /**
      * 新增操作日志
      *

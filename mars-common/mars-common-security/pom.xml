@@ -14,8 +14,6 @@
     <dependencies>
 
 
-
-
         <!-- mars Common Redis-->
         <dependency>
             <groupId>com.mars</groupId>

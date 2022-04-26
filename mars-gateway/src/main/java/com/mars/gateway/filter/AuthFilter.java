@@ -33,8 +33,7 @@ import javax.annotation.Resource;
  * @author mars
  */
 @Component
-public class AuthFilter implements GlobalFilter, Ordered
-{
+public class AuthFilter implements GlobalFilter, Ordered {
     private static final Logger log = LoggerFactory.getLogger(AuthFilter.class);
 
     private final static long EXPIRE_TIME = Constants.TOKEN_EXPIRE * 60;
@@ -50,29 +49,24 @@ public class AuthFilter implements GlobalFilter, Ordered
     private RedisService redisService;
 
     @Override
-    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain)
-    {
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String url = exchange.getRequest().getURI().getPath();
         // 跳过不需要验证的路径
-        if (StringUtils.matches(url, ignoreWhite.getWhites()))
-        {
+        if (StringUtils.matches(url, ignoreWhite.getWhites())) {
             return chain.filter(exchange);
         }
         String token = getToken(exchange.getRequest());
-        if (StringUtils.isBlank(token))
-        {
+        if (StringUtils.isBlank(token)) {
             return setUnauthorizedResponse(exchange, "令牌不能为空");
         }
         String userStr = sops.get(getTokenKey(token));
-        if (StringUtils.isNull(userStr))
-        {
+        if (StringUtils.isNull(userStr)) {
             return setUnauthorizedResponse(exchange, "登录状态已过期");
         }
         JSONObject obj = JSONObject.parseObject(userStr);
         String userid = obj.getString("userid");
         String username = obj.getString("username");
-        if (StringUtils.isBlank(userid) || StringUtils.isBlank(username))
-        {
+        if (StringUtils.isBlank(userid) || StringUtils.isBlank(username)) {
             return setUnauthorizedResponse(exchange, "令牌验证失败");
         }
 
@@ -86,8 +80,7 @@ public class AuthFilter implements GlobalFilter, Ordered
         return chain.filter(mutableExchange);
     }
 
-    private Mono<Void> setUnauthorizedResponse(ServerWebExchange exchange, String msg)
-    {
+    private Mono<Void> setUnauthorizedResponse(ServerWebExchange exchange, String msg) {
         ServerHttpResponse response = exchange.getResponse();
         response.getHeaders().setContentType(MediaType.APPLICATION_JSON);
         response.setStatusCode(HttpStatus.OK);
@@ -100,27 +93,23 @@ public class AuthFilter implements GlobalFilter, Ordered
         }));
     }
 
-    private String getTokenKey(String token)
-    {
+    private String getTokenKey(String token) {
         return CacheConstants.LOGIN_TOKEN_KEY + token;
     }
 
     /**
      * 获取请求token
      */
-    private String getToken(ServerHttpRequest request)
-    {
+    private String getToken(ServerHttpRequest request) {
         String token = request.getHeaders().getFirst(CacheConstants.HEADER);
-        if (StringUtils.isNotEmpty(token) && token.startsWith(CacheConstants.TOKEN_PREFIX))
-        {
+        if (StringUtils.isNotEmpty(token) && token.startsWith(CacheConstants.TOKEN_PREFIX)) {
             token = token.replace(CacheConstants.TOKEN_PREFIX, "");
         }
         return token;
     }
 
     @Override
-    public int getOrder()
-    {
+    public int getOrder() {
         return -200;
     }
 }

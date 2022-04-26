@@ -2,11 +2,10 @@ package com.mars.common.core.constants;
 
 /**
  * Token的Key常量
- * 
+ *
  * @author ruoyi
  */
-public class TokenConstants
-{
+public class TokenConstants {
     /**
      * 令牌自定义标识
      */

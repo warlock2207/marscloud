@@ -24,15 +24,13 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/operlog")
-public class SysOperlogController extends BaseController
-{
+public class SysOperlogController extends BaseController {
     @Autowired
     private ISysOperLogService operLogService;
 
     @PreAuthorize(hasPermi = "system:operlog:list")
     @GetMapping("/list")
-    public TableDataInfo list(SysOperLog operLog)
-    {
+    public TableDataInfo list(SysOperLog operLog) {
         startPage();
         List<SysOperLog> list = operLogService.selectOperLogList(operLog);
         return getDataTable(list);
@@ -41,8 +39,7 @@ public class SysOperlogController extends BaseController
     @Log(title = "操作日志", businessType = BusinessType.EXPORT)
     @PreAuthorize(hasPermi = "system:operlog:export")
     @PostMapping("/export")
-    public void export(HttpServletResponse response, SysOperLog operLog) throws IOException
-    {
+    public void export(HttpServletResponse response, SysOperLog operLog) throws IOException {
         List<SysOperLog> list = operLogService.selectOperLogList(operLog);
         ExcelUtil<SysOperLog> util = new ExcelUtil<SysOperLog>(SysOperLog.class);
         util.exportExcel(response, list, "操作日志");
@@ -51,24 +48,21 @@ public class SysOperlogController extends BaseController
     @Log(title = "操作日志", businessType = BusinessType.DELETE)
     @PreAuthorize(hasPermi = "system:operlog:remove")
     @DeleteMapping("/{operIds}")
-    public AjaxResult remove(@PathVariable Long[] operIds)
-    {
+    public AjaxResult remove(@PathVariable Long[] operIds) {
         return toAjax(operLogService.deleteOperLogByIds(operIds));
     }
 
     @PreAuthorize(hasPermi = "system:operlog:remove")
     @Log(title = "操作日志", businessType = BusinessType.CLEAN)
     @DeleteMapping("/clean")
-    public AjaxResult clean()
-    {
+    public AjaxResult clean() {
         operLogService.cleanOperLog();
         return AjaxResult.success();
     }
 
     @InnerAuth
     @PostMapping
-    public AjaxResult add(@RequestBody SysOperLog operLog)
-    {
+    public AjaxResult add(@RequestBody SysOperLog operLog) {
         return toAjax(operLogService.insertOperlog(operLog));
     }
 }

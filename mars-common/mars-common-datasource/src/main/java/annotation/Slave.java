@@ -6,14 +6,11 @@ import java.lang.annotation.*;
 
 /**
  * 从库数据源
- *
- *
  */
-@Target({ ElementType.TYPE, ElementType.METHOD })
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @DS("slave")
-public @interface Slave
-{
+public @interface Slave {
 
 }

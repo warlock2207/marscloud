@@ -28,7 +28,7 @@ public interface RemoteLogService {
      * 保存访问记录
      *
      * @param sysLogininfor 访问实体
-     * @param source 请求来源
+     * @param source        请求来源
      * @return 结果
      */
     @PostMapping("/logininfor")

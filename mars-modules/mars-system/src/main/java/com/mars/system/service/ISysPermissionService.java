@@ -2,8 +2,7 @@ package com.mars.system.service;
 
 import java.util.Set;
 
-public interface ISysPermissionService
-{
+public interface ISysPermissionService {
     /**
      * 获取角色数据权限
      *

@@ -2,11 +2,8 @@ package com.mars.common.core.constants;
 
 /**
  * 权限相关通用常量
- *
- *
  */
-public class SecurityConstants
-{
+public class SecurityConstants {
     /**
      * 令牌自定义标识
      */

@@ -12,11 +12,11 @@
     <artifactId>mars-common-redis</artifactId>
     <dependencies>
 
-    <!-- SpringBoot Boot Redis -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-redis</artifactId>
-    </dependency>
+        <!-- SpringBoot Boot Redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.mars</groupId>
             <artifactId>mars-common-core</artifactId>

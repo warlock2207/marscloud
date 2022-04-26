@@ -2,11 +2,8 @@ package com.mars.common.core.constants;
 
 /**
  * 缓存的key 常量
- *
- *
  */
-public class CacheConstants
-{
+public class CacheConstants {
     /**
      * 令牌自定义标识
      */

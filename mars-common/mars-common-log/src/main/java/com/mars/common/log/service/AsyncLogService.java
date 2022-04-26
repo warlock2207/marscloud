@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
  * @author mars
  */
 @Service
-public class AsyncLogService
-{
+public class AsyncLogService {
     @Autowired
     private RemoteLogService remoteLogService;
 
@@ -21,8 +20,7 @@ public class AsyncLogService
      * 保存系统日志记录
      */
     @Async
-    public void saveSysLog(SysOperLog sysOperLog)
-    {
+    public void saveSysLog(SysOperLog sysOperLog) {
         remoteLogService.saveLog(sysOperLog);
     }
 }

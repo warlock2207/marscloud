@@ -8,11 +8,8 @@ import java.util.Set;
 
 /**
  * 角色业务层
- *
- *
  */
-public interface ISysRoleService
-{
+public interface ISysRoleService {
     /**
      * 根据条件分页查询角色数据
      *
@@ -138,6 +135,7 @@ public interface ISysRoleService
      * @return 结果
      */
     public int deleteRoleByIds(Long[] roleIds);
+
     /**
      * 取消授权用户角色
      *
@@ -149,7 +147,7 @@ public interface ISysRoleService
     /**
      * 批量取消授权用户角色
      *
-     * @param roleId 角色ID
+     * @param roleId  角色ID
      * @param userIds 需要取消授权的用户数据ID
      * @return 结果
      */
@@ -158,7 +156,7 @@ public interface ISysRoleService
     /**
      * 批量选择授权用户角色
      *
-     * @param roleId 角色ID
+     * @param roleId  角色ID
      * @param userIds 需要删除的用户数据ID
      * @return 结果
      */

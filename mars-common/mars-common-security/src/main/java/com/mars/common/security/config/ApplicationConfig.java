@@ -7,17 +7,13 @@ import java.util.TimeZone;
 
 /**
  * 系统配置
- *
- *
  */
-public class ApplicationConfig
-{
+public class ApplicationConfig {
     /**
      * 时区配置
      */
     @Bean
-    public Jackson2ObjectMapperBuilderCustomizer jacksonObjectMapperCustomization()
-    {
+    public Jackson2ObjectMapperBuilderCustomizer jacksonObjectMapperCustomization() {
         return jacksonObjectMapperBuilder -> jacksonObjectMapperBuilder.timeZone(TimeZone.getDefault());
     }
 }

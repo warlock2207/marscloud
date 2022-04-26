@@ -11,8 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class SysPermissionServiceImpl implements ISysPermissionService
-{
+public class SysPermissionServiceImpl implements ISysPermissionService {
     @Autowired
     private ISysRoleService roleService;
 
@@ -26,16 +25,12 @@ public class SysPermissionServiceImpl implements ISysPermissionService
      * @return 角色权限信息
      */
     @Override
-    public Set<String> getRolePermission(Long userId)
-    {
+    public Set<String> getRolePermission(Long userId) {
         Set<String> roles = new HashSet<String>();
         // 管理员拥有所有权限
-        if (SysUser.isAdmin(userId))
-        {
+        if (SysUser.isAdmin(userId)) {
             roles.add("admin");
-        }
-        else
-        {
+        } else {
 
             roles.addAll(roleService.selectRolePermissionByUserId(userId));
         }
@@ -49,16 +44,12 @@ public class SysPermissionServiceImpl implements ISysPermissionService
      * @return 菜单权限信息
      */
     @Override
-    public Set<String> getMenuPermission(Long userId)
-    {
+    public Set<String> getMenuPermission(Long userId) {
         Set<String> perms = new HashSet<String>();
         // 管理员拥有所有权限
-        if (SysUser.isAdmin(userId))
-        {
+        if (SysUser.isAdmin(userId)) {
             perms.add("*:*:*");
-        }
-        else
-        {
+        } else {
             //perms.add("*:*:*");
             perms.addAll(menuService.selectMenuPermsByUserId(userId));
         }
