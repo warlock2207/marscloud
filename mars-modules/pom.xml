@@ -15,6 +15,7 @@
         <module>mars-system</module>
         <module>mars-gen</module>
         <module>mars-job</module>
+        <module>mars-game</module>
     </modules>
 
 

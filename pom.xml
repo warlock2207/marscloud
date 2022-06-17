@@ -261,6 +261,7 @@
       <module>mars-auth</module>
       <module>mars-api</module>
       <module>mars-modules</module>
+      <module>mars-game</module>
   </modules>
   <packaging>pom</packaging>
 
