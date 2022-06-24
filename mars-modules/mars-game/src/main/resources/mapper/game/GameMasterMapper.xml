@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mars.game.mapper.GameMasterMapper">
+    <resultMap type="com.mars.game.domain.GameMaster" id="GameMaster">
+        <result property="gameId"    column="game_id" />
+    </resultMap>
+    <parameterMap id="GameMaster" type="com.mars.game.domain.GameMaster"/>
+
+    <sql id="selectGameList">
+        select id,id, title, text, url, game_id, nsuid from mars_game.game_master
+    </sql>
+
+    <select id="selectGameAll" resultMap="GameMaster">
+        <include refid="selectGameList"/>
+    </select>
+
+    <insert id="insertGame" parameterMap="GameMaster" useGeneratedKeys="true" keyProperty="id">
+        insert into mars_game.game_master(
+        <if test="id != null and id != 0">id,</if>
+        <if test="title != null and title != ''">title,</if>
+        <if test="text != null and text != ''">text,</if>
+        <if test="url != null and url != ''">url,</if>
+        <if test="gameId != null and gameId != ''">game_id,</if>
+        <if test="nsuid != null and nsuid != ''">nsuid,</if>
+        )values(
+        <if test="id != null and id != 0">#{id},</if>
+        <if test="title != null and title != ''">#{title},</if>
+        <if test="text != null and text != ''">#{text},</if>
+        <if test="url != null and url != ''">#{url},</if>
+        <if test="gameId != null and gameId != ''">#{gameId},</if>
+        <if test="nsuid != null and nsuid != ''">#{nsuid},</if>
+        )
+    </insert>
+
+
+
+
+</mapper>
