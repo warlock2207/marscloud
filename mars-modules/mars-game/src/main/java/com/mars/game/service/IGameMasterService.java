@@ -19,4 +19,11 @@ public interface IGameMasterService {
      * @return 结果
      */
     int insertGame(GameMaster gameMaster);
+    /**
+     * 通过ID查询游戏信息
+     *
+     * @param id 游戏ID
+     * @return 游戏对象的信息
+     */
+    GameMaster selectGameById(String id);
 }

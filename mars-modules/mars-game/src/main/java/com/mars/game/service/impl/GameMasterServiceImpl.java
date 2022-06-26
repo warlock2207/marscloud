@@ -27,4 +27,9 @@ public class GameMasterServiceImpl implements IGameMasterService {
     public int insertGame(GameMaster gameMaster) {
         return gameMasterMapper.insertGame(gameMaster);
     }
+
+    @Override
+    public GameMaster selectGameById(String id) {
+        return gameMasterMapper.selectGameById(id);
+    }
 }

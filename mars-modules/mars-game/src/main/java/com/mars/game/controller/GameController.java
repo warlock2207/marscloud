@@ -10,9 +10,7 @@ import com.mars.game.domain.GameMaster;
 import com.mars.game.service.IGameMasterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,6 +36,13 @@ public class GameController extends BaseController {
     @RequestMapping("/add")
     public AjaxResult add(@Validated @RequestBody GameMaster gameMaster) {
         return toAjax(gameMasterService.insertGame(gameMaster));
+    }
+    /**
+     * 根据id获取详细信息
+     */
+    @RequestMapping(value = "/{id}")
+    public AjaxResult getInfo(@PathVariable String id) {
+        return AjaxResult.success(gameMasterService.selectGameById(id));
     }
 }
 

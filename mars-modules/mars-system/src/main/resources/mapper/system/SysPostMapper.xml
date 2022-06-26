@@ -107,7 +107,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			sysdate()
  		)
 	</insert>
-
+c
 	<delete id="deletePostById" parameterType="Long">
 		delete from sys_post where post_id = #{postId}
 	</delete>

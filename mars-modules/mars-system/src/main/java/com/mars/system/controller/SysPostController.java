@@ -64,8 +64,8 @@ public class SysPostController extends BaseController {
      */
     @PreAuthorize(hasPermi = "system:post:add")
     @Log(title = "岗位管理", businessType = BusinessType.INSERT)
-    @PostMapping
-    public AjaxResult add(@Validated @RequestBody SysPost post) {
+        @PostMapping
+        public AjaxResult add(@Validated @RequestBody SysPost post) {
         if (UserConstants.NOT_UNIQUE.equals(postService.checkPostNameUnique(post))) {
             return AjaxResult.error("新增岗位'" + post.getPostName() + "'失败，岗位名称已存在");
         } else if (UserConstants.NOT_UNIQUE.equals(postService.checkPostCodeUnique(post))) {
