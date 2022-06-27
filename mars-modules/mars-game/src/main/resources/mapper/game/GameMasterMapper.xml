@@ -5,11 +5,16 @@
 <mapper namespace="com.mars.game.mapper.GameMasterMapper">
     <resultMap type="com.mars.game.domain.GameMaster" id="GameMaster">
         <result property="gameId"    column="game_id" />
+        <result property="gameType"    column="game_type" />
+        <result property="romSize"    column="rom_size" />
+        <result property="playMode"    column="play_mode" />
+        <result property="isAmiibo"    column="is_amiibo" />
     </resultMap>
     <parameterMap id="GameMaster" type="com.mars.game.domain.GameMaster"/>
 
     <sql id="selectGameList">
-        select id,id, title, text, url, game_id, nsuid from mars_game.game_master
+        select id, title, text, url, game_id, nsuid, pdate, game_type, rom_size, play_mode, is_amiibo
+        from mars_game.game_master
     </sql>
 
     <select id="selectGameAll" resultMap="GameMaster">
@@ -18,19 +23,29 @@
 
     <insert id="insertGame" parameterMap="GameMaster" useGeneratedKeys="true" keyProperty="id">
         insert into mars_game.game_master(
-        <if test="id != null and id != 0">id,</if>
+        <if test="id != null and id != ''">id,</if>
         <if test="title != null and title != ''">title,</if>
         <if test="text != null and text != ''">text,</if>
         <if test="url != null and url != ''">url,</if>
         <if test="gameId != null and gameId != ''">game_id,</if>
         <if test="nsuid != null and nsuid != ''">nsuid,</if>
+        <if test="pdate != null ">pdate,</if>
+        <if test="gameType != null and gameType != ''">game_type,</if>
+        <if test="romSize != null and romSize != ''">rom_size,</if>
+        <if test="playMode != null and playMode != ''">play_mode,</if>
+        is_amiibo
         )values(
-        <if test="id != null and id != 0">#{id},</if>
+        <if test="id != null and id != ''">#{id},</if>
         <if test="title != null and title != ''">#{title},</if>
         <if test="text != null and text != ''">#{text},</if>
         <if test="url != null and url != ''">#{url},</if>
         <if test="gameId != null and gameId != ''">#{gameId},</if>
         <if test="nsuid != null and nsuid != ''">#{nsuid},</if>
+        <if test="pdate != null ">#{pdate},</if>
+        <if test="gameType != null and gameType != ''">#{gameType},</if>
+        <if test="romSize != null and romSize != ''">#{romSize},</if>
+        <if test="playMode != null and playMode != ''">#{playMode},</if>
+        #{isAmiibo}
         )
     </insert>
 
@@ -38,6 +53,35 @@
         <include refid="selectGameList"/>
         where id = #{id}
     </select>
+
+    <delete id="deleteGameById" parameterType="String">
+        delete from mars_game.game_master where id = #{id}
+    </delete>
+
+    <delete id="deleteGameByIds" parameterType="String">
+        delete from mars_game.game_master where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <update id="updateGame" parameterType="GameMaster">
+        update mars_game.game_master
+        <set>
+            <if test="id != null and id != ''">id = #{id},</if>
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="text != null and text != ''">text = #{text},</if>
+            <if test="url != null and url != ''">url = #{url},</if>
+            <if test="gameId != null and gameId != ''">game_id = #{gameId},</if>
+            <if test="nsuid != null and nsuid != ''">nsuid = #{nsuid},</if>
+            <if test="pdate != null ">pdate = #{pdate},</if>
+            <if test="gameType != null and gameType != ''">game_type = #{gameType},</if>
+            <if test="romSize != null and romSize != ''">rom_size = #{romSize},</if>
+            <if test="playMode != null and playMode != ''">play_mode = #{playMode},</if>
+            is_amiibo = #{isAmiibo}
+        </set>
+        where id = #{id}
+    </update>
 
 
 

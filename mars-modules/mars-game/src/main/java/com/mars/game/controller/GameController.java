@@ -44,5 +44,21 @@ public class GameController extends BaseController {
     public AjaxResult getInfo(@PathVariable String id) {
         return AjaxResult.success(gameMasterService.selectGameById(id));
     }
+    /**
+     * 删除游戏
+     */
+    @Log(title = "游戏管理", businessType = BusinessType.DELETE)
+    @DeleteMapping("/delete/{ids}")
+    public AjaxResult remove(@PathVariable String[] ids) {
+        return toAjax(gameMasterService.deleteGameByIds(ids));
+    }
+    /**
+     * 修改游戏
+     */
+    @Log(title = "游戏管理", businessType = BusinessType.UPDATE)
+    @RequestMapping("/update")
+    public AjaxResult edit(@Validated @RequestBody GameMaster gameMaster) {
+        return toAjax(gameMasterService.updateGame(gameMaster));
+    }
 }
 

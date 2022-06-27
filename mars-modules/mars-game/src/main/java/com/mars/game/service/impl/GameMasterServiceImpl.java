@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class GameMasterServiceImpl implements IGameMasterService {
@@ -25,11 +26,30 @@ public class GameMasterServiceImpl implements IGameMasterService {
 
     @Override
     public int insertGame(GameMaster gameMaster) {
+        gameMaster.setId(UUID.randomUUID().toString());
         return gameMasterMapper.insertGame(gameMaster);
     }
 
     @Override
     public GameMaster selectGameById(String id) {
         return gameMasterMapper.selectGameById(id);
+    }
+
+    @Override
+    public int deleteGameById(String id) {
+        return gameMasterMapper.deleteGameById(id);
+    }
+
+    @Override
+    public int deleteGameByIds(String[] ids) {
+        for (String id : ids) {
+            GameMaster gameMaster = selectGameById(id);
+        }
+        return gameMasterMapper.deleteGameByIds(ids);
+    }
+
+    @Override
+    public int updateGame(GameMaster gameMaster) {
+        return gameMasterMapper.updateGame(gameMaster);
     }
 }
