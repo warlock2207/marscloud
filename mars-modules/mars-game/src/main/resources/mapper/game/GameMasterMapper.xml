@@ -65,7 +65,7 @@
         </foreach>
     </delete>
 
-    <update id="updateGame" parameterMap="GameMaster">
+    <update id="updateGame" parameterType="GameMaster">
         update mars_game.game_master
         <set>
             <if test="id != null and id != ''">id = #{id},</if>
