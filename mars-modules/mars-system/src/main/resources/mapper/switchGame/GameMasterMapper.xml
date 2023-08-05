@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mars.switchGame.mapper.GameMasterMapper">
+    
+    <resultMap type="com.mars.switchGame.domain.GameMaster" id="GameMasterResult">
+        <result property="id"    column="id"    />
+        <result property="title"    column="title"    />
+        <result property="text"    column="text"    />
+        <result property="url"    column="url"    />
+        <result property="gameId"    column="game_id"    />
+        <result property="nsuid"    column="nsuid"    />
+        <result property="pdate"    column="pdate"    />
+        <result property="gameType"    column="game_type"    />
+        <result property="romSize"    column="rom_size"    />
+        <result property="playMode"    column="play_mode"    />
+        <result property="isAmiibo"    column="is_amiibo"    />
+        <result property="img"    column="img"    />
+        <result property="isDlc"    column="is_dlc"    />
+        <result property="mainId"    column="main_id"    />
+    </resultMap>
+
+    <sql id="selectGameMasterVo">
+        select id, title, text, url, game_id, nsuid, pdate, game_type, rom_size, play_mode, is_amiibo, img, is_dlc, main_id from game_master
+    </sql>
+
+    <select id="selectGameMasterList" parameterType="com.mars.switchGame.domain.GameMaster" resultMap="GameMasterResult">
+        <include refid="selectGameMasterVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="text != null  and text != ''"> and text = #{text}</if>
+            <if test="url != null  and url != ''"> and url = #{url}</if>
+            <if test="gameId != null  and gameId != ''"> and game_id = #{gameId}</if>
+            <if test="nsuid != null  and nsuid != ''"> and nsuid = #{nsuid}</if>
+            <if test="pdate != null "> and pdate = #{pdate}</if>
+            <if test="gameType != null  and gameType != ''"> and game_type = #{gameType}</if>
+            <if test="romSize != null  and romSize != ''"> and rom_size = #{romSize}</if>
+            <if test="playMode != null  and playMode != ''"> and play_mode = #{playMode}</if>
+            <if test="isAmiibo != null  and isAmiibo != ''"> and is_amiibo = #{isAmiibo}</if>
+            <if test="img != null  and img != ''"> and img = #{img}</if>
+            <if test="isDlc != null  and isDlc != ''"> and is_dlc = #{isDlc}</if>
+            <if test="mainId != null  and mainId != ''"> and main_id = #{mainId}</if>
+        </where>
+    </select>
+    
+    <select id="selectGameMasterById" parameterType="String" resultMap="GameMasterResult">
+        <include refid="selectGameMasterVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertGameMaster" parameterType="com.mars.switchGame.domain.GameMaster">
+        insert into game_master
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="title != null">title,</if>
+            <if test="text != null">text,</if>
+            <if test="url != null">url,</if>
+            <if test="gameId != null">game_id,</if>
+            <if test="nsuid != null">nsuid,</if>
+            <if test="pdate != null">pdate,</if>
+            <if test="gameType != null">game_type,</if>
+            <if test="romSize != null">rom_size,</if>
+            <if test="playMode != null">play_mode,</if>
+            <if test="isAmiibo != null">is_amiibo,</if>
+            <if test="img != null">img,</if>
+            <if test="isDlc != null">is_dlc,</if>
+            <if test="mainId != null">main_id,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="title != null">#{title},</if>
+            <if test="text != null">#{text},</if>
+            <if test="url != null">#{url},</if>
+            <if test="gameId != null">#{gameId},</if>
+            <if test="nsuid != null">#{nsuid},</if>
+            <if test="pdate != null">#{pdate},</if>
+            <if test="gameType != null">#{gameType},</if>
+            <if test="romSize != null">#{romSize},</if>
+            <if test="playMode != null">#{playMode},</if>
+            <if test="isAmiibo != null">#{isAmiibo},</if>
+            <if test="img != null">#{img},</if>
+            <if test="isDlc != null">#{isDlc},</if>
+            <if test="mainId != null">#{mainId},</if>
+         </trim>
+    </insert>
+
+    <update id="updateGameMaster" parameterType="com.mars.switchGame.domain.GameMaster">
+        update game_master
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null">title = #{title},</if>
+            <if test="text != null">text = #{text},</if>
+            <if test="url != null">url = #{url},</if>
+            <if test="gameId != null">game_id = #{gameId},</if>
+            <if test="nsuid != null">nsuid = #{nsuid},</if>
+            <if test="pdate != null">pdate = #{pdate},</if>
+            <if test="gameType != null">game_type = #{gameType},</if>
+            <if test="romSize != null">rom_size = #{romSize},</if>
+            <if test="playMode != null">play_mode = #{playMode},</if>
+            <if test="isAmiibo != null">is_amiibo = #{isAmiibo},</if>
+            <if test="img != null">img = #{img},</if>
+            <if test="isDlc != null">is_dlc = #{isDlc},</if>
+            <if test="mainId != null">main_id = #{mainId},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteGameMasterById" parameterType="String">
+        delete from game_master where id = #{id}
+    </delete>
+
+    <delete id="deleteGameMasterByIds" parameterType="String">
+        delete from game_master where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectGameModelList" parameterType="com.mars.switchGame.domain.vo.GameModel" resultType="com.mars.switchGame.domain.vo.GameModel">
+        SELECT
+            m.id,
+            m.title,
+            m.text,
+            m.url,
+            m.game_id,
+            m.nsuid,
+            m.pdate,
+            m.game_type,
+            m.rom_size,
+            m.play_mode,
+            m.is_amiibo,
+            m.img,
+            m.is_dlc,
+            m.main_id,
+            m.score,
+            m.is_hot,
+            p.country,
+            p.original_price,
+            p.discount_price,
+            p.is_discount,
+            p.original_price_cny,
+            p.discount_price_cny,
+            p.discount_begin,
+            p.discount_end,
+        p.original_price_cny-p.discount_price_cny as discountMoney
+        FROM
+        game_master AS m
+        LEFT JOIN game_price AS p ON m.game_id = p.id
+        <where>
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%') </if>
+            <if test="type != null  and type != ''">
+                <if test="type = 'choiceness'">
+                    and m.choiceness='1'
+                </if>
+                <if test="type = 'newDiscount'">
+                    order by p.discount_begin desc
+                </if>
+                <if test="type = 'hot'">
+                    and m.is_hot='1'
+                </if>
+                <if test="type = 'endDiscount'">
+                    order by p.discount_end asc
+                </if>
+                <if test="type = 'discountPercent'">
+                    order by discountMoney desc
+                </if>
+                <if test="type = 'score'">
+                    order by score desc
+                </if>
+            </if>
+        </where>
+    </select>
+
+</mapper>
