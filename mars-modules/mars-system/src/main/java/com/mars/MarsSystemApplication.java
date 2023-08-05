@@ -1,4 +1,4 @@
-package com.mars.system;
+package com.mars;
 
 //import com.mars.common.security.annotation.EnableCustomConfig;
 
