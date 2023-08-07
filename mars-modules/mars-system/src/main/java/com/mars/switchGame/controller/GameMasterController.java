@@ -91,9 +91,9 @@ public class GameMasterController extends BaseController {
     }
 
 
-    @GetMapping("/gamelist")
-    public TableDataInfo gamelist(GameModel gameModel) {
-        startPage();
+    @PostMapping("/gamelist")
+    public TableDataInfo gamelist(@RequestBody GameModel gameModel) {
+        startPageJson(gameModel.getPageNum(),gameModel.getPageSize());
         List<GameMaster> list = gameMasterService.selectGamModelList(gameModel);
         return getDataTable(list);
     }

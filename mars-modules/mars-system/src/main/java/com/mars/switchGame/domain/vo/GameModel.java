@@ -91,4 +91,240 @@ public class GameModel implements Serializable {
 
     private String type;
 
+    private int pageNum;
+
+    private int pageSize;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(String gameId) {
+        this.gameId = gameId;
+    }
+
+    public String getNsuid() {
+        return nsuid;
+    }
+
+    public void setNsuid(String nsuid) {
+        this.nsuid = nsuid;
+    }
+
+    public Date getPdate() {
+        return pdate;
+    }
+
+    public void setPdate(Date pdate) {
+        this.pdate = pdate;
+    }
+
+    public String getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(String gameType) {
+        this.gameType = gameType;
+    }
+
+    public String getRomSize() {
+        return romSize;
+    }
+
+    public void setRomSize(String romSize) {
+        this.romSize = romSize;
+    }
+
+    public String getPlayMode() {
+        return playMode;
+    }
+
+    public void setPlayMode(String playMode) {
+        this.playMode = playMode;
+    }
+
+    public String getIsAmiibo() {
+        return isAmiibo;
+    }
+
+    public void setIsAmiibo(String isAmiibo) {
+        this.isAmiibo = isAmiibo;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getIsDlc() {
+        return isDlc;
+    }
+
+    public void setIsDlc(String isDlc) {
+        this.isDlc = isDlc;
+    }
+
+    public String getMainId() {
+        return mainId;
+    }
+
+    public void setMainId(String mainId) {
+        this.mainId = mainId;
+    }
+
+    public String getChoiceness() {
+        return choiceness;
+    }
+
+    public void setChoiceness(String choiceness) {
+        this.choiceness = choiceness;
+    }
+
+    public String getIsHot() {
+        return isHot;
+    }
+
+    public void setIsHot(String isHot) {
+        this.isHot = isHot;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getOriginal_price() {
+        return original_price;
+    }
+
+    public void setOriginal_price(String original_price) {
+        this.original_price = original_price;
+    }
+
+    public String getDiscount_price() {
+        return discount_price;
+    }
+
+    public void setDiscount_price(String discount_price) {
+        this.discount_price = discount_price;
+    }
+
+    public String getIs_discount() {
+        return is_discount;
+    }
+
+    public void setIs_discount(String is_discount) {
+        this.is_discount = is_discount;
+    }
+
+    public String getOriginal_price_cny() {
+        return original_price_cny;
+    }
+
+    public void setOriginal_price_cny(String original_price_cny) {
+        this.original_price_cny = original_price_cny;
+    }
+
+    public String getDiscount_price_cny() {
+        return discount_price_cny;
+    }
+
+    public void setDiscount_price_cny(String discount_price_cny) {
+        this.discount_price_cny = discount_price_cny;
+    }
+
+    public String getDiscount_begin() {
+        return discount_begin;
+    }
+
+    public void setDiscount_begin(String discount_begin) {
+        this.discount_begin = discount_begin;
+    }
+
+    public String getDiscount_end() {
+        return discount_end;
+    }
+
+    public void setDiscount_end(String discount_end) {
+        this.discount_end = discount_end;
+    }
+
+    public String getDiscountMoney() {
+        return discountMoney;
+    }
+
+    public void setDiscountMoney(String discountMoney) {
+        this.discountMoney = discountMoney;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(int pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
 }

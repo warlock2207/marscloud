@@ -1,5 +1,6 @@
-package com.mars.switchGame.mapper.impl;
+package com.mars.switchGame.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.mars.switchGame.domain.GameMaster;
 import com.mars.switchGame.domain.vo.GameModel;
 import com.mars.switchGame.mapper.GameMasterMapper;
@@ -87,6 +88,7 @@ public class GameMasterServiceImpl implements IGameMasterService {
     }
 
     @Override
+    @DS("slave")
     public List<GameMaster> selectGamModelList(GameModel gameModel) {
         return gameMasterMapper.selectGameModelList(gameModel);
     }

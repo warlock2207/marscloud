@@ -52,6 +52,18 @@ public class BaseController {
         }
     }
 
+    protected void startPageJson(Integer pageNum, Integer pageSize) {
+        if(pageNum==null){
+            pageNum=1;
+        }
+        if(pageSize==null){
+            pageNum=10;
+        }
+        if (StringUtils.isNotNull(pageNum) && StringUtils.isNotNull(pageSize)) {
+            PageHelper.startPage(pageNum, pageSize);
+        }
+    }
+
     /**
      * 响应请求分页数据
      */

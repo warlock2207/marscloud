@@ -149,22 +149,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <where>
             <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%') </if>
             <if test="type != null  and type != ''">
-                <if test="type = 'choiceness'">
+                <if test="type == 'choiceness'">
                     and m.choiceness='1'
                 </if>
-                <if test="type = 'newDiscount'">
+                <if test="type == 'newDiscount'">
                     order by p.discount_begin desc
                 </if>
-                <if test="type = 'hot'">
+                <if test="type == 'hot'">
                     and m.is_hot='1'
                 </if>
-                <if test="type = 'endDiscount'">
+                <if test="type == 'endDiscount'">
                     order by p.discount_end asc
                 </if>
-                <if test="type = 'discountPercent'">
+                <if test="type == 'discountPercent'">
                     order by discountMoney desc
                 </if>
-                <if test="type = 'score'">
+                <if test="type == 'score'">
                     order by score desc
                 </if>
             </if>
